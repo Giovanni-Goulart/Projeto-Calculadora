@@ -1,0 +1,296 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+
+    /* =====================================================
+       IMAGEM DE FUNDO
+    ====================================================== */
+
+    background-image: url('imagens/fundo-calculadora.png');
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   OVERLAY ESCURO
+===================================================== */
+
+.overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   CONTAINER PRINCIPAL
+===================================================== */
+
+.container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    background: rgba(15, 15, 15, 0.55);
+
+    backdrop-filter: blur(6px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 24px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(255, 123, 0, 0.08);
+
+    color: white;
+}
+
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+.titulo-area {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.titulo-area h1 {
+
+    font-size: 2rem;
+
+    margin-bottom: 10px;
+
+    color: #ff7b00;
+}
+
+
+.titulo-area p {
+
+    font-size: 0.95rem;
+
+    color: #d9d9d9;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.input-group {
+
+    margin-bottom: 20px;
+}
+
+
+.input-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 500;
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+
+.input-group input:focus {
+
+    border-color: #ff7b00;
+
+    box-shadow: 0 0 10px rgba(255, 123, 0, 0.4);
+}
+
+
+/* =====================================================
+   BOTÃO
+===================================================== */
+
+button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #ff7b00, #ff3c00);
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    margin-top: 10px;
+}
+
+
+button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 20px rgba(255, 123, 0, 0.35);
+}
+
+
+button:active {
+
+    transform: scale(0.98);
+}
+
+
+/* =====================================================
+   RESULTADO
+===================================================== */
+
+#resultado {
+
+    margin-top: 30px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    display: none;
+
+    animation: aparecer 0.5s ease;
+}
+
+
+#resultado h2 {
+
+    margin-bottom: 20px;
+
+    color: #ff7b00;
+
+    text-align: center;
+}
+
+
+#resultado p {
+
+    margin-bottom: 12px;
+
+    line-height: 1.6;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    padding-bottom: 8px;
+}
+
+
+/* =====================================================
+   ANIMAÇÃO
+===================================================== */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .container {
+        padding: 25px;
+    }
+
+    .titulo-area h1 {
+        font-size: 1.7rem;
+    }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- =====================================================
+         CONFIGURAÇÕES BÁSICAS
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora de Churrasco</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         OVERLAY ESCURO
+    ====================================================== -->
+
+    <div class="overlay"></div>
+
+
+    <!-- =====================================================
+         CONTAINER PRINCIPAL
+    ====================================================== -->
+
+    <main class="container">
+
+
+        <!-- =====================================================
+             TÍTULO
+        ====================================================== -->
+
+        <div class="titulo-area">
+
+            <h1>🍖 Calculadora de Churrasco</h1>
+
+            <p>
+                Descubra a quantidade ideal de carnes e bebidas
+                para o seu churrasco.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+             FORMULÁRIO
+        ====================================================== -->
+
+        <section class="formulario">
+
+
+            <!-- HOMENS -->
+            <div class="input-group">
+
+                <label for="homens">
+                    Homens
+                </label>
+
+                <input
+                    type="number"
+                    id="homens"
+                    placeholder="Digite a quantidade"
+                    min="0"
+                >
+
+            </div>
+
+
+            <!-- MULHERES -->
+            <div class="input-group">
+
+                <label for="mulheres">
+                    Mulheres
+                </label>
+
+                <input
+                    type="number"
+                    id="mulheres"
+                    placeholder="Digite a quantidade"
+                    min="0"
+                >
+
+            </div>
+
+
+            <!-- CRIANÇAS -->
+            <div class="input-group">
+
+                <label for="criancas">
+                    Crianças
+                </label>
+
+                <input
+                    type="number"
+                    id="criancas"
+                    placeholder="Digite a quantidade"
+                    min="0"
+                >
+
+            </div>
+
+
+            <!-- BOTÃO -->
+            <button id="calcular">
+                Calcular Churrasco 🔥
+            </button>
+
+        </section>
+
+
+        <!-- =====================================================
+             RESULTADO
+        ====================================================== -->
+
+        <section id="resultado"></section>
+
+    </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
